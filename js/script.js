@@ -15,6 +15,10 @@ function setTitle(element) {
   document.title = `${text}`;
 }
 
+var today = new Date();
+var formattedToday = today.toISOString().split('T')[0];
+document.getElementById('inputbirthdate').setAttribute('max', formattedToday);
+
 function validateForm() {
   const name = document.forms["form"]["name"].value;
   const birthDate = document.forms["form"]["birth-date"].value;

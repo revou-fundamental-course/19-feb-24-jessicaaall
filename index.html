@@ -34,19 +34,19 @@
   </header>
 
   <main>
-    <section class="contact">
+    <section class="contact" id="message-us">
       <h2>Message Us</h2>
       <div class="contact-form">
         <form name="form" onsubmit="return validateForm()">
           <div class="input-type">
             <label for="name">Name</label>
             <div class="colon">:</div>
-            <input type="text" id="inputname" placeholder="Your name" name="name" />
+            <input type="text" id="inputname" placeholder="your name" name="name" />
           </div>
           <div class="input-type">
             <label for="birth-date">Birth Date</label>
             <div class="colon">:</div>
-            <input type="date" id="inputbirthdate" placeholder="Your birth date" name="birth-date" />
+            <input type="date" id="inputbirthdate" placeholder="your birth date" name="birth-date" />
           </div>
           <div class="input-type">
             <label>Gender</label>
@@ -61,17 +61,17 @@
           <div class="input-type" id="your-message">
             <label for="message">Message</label>
             <div class="colon">:</div>
-            <textarea placeholder="Your message" id="inputmessage" name="message"></textarea>
+            <textarea placeholder="your message" id="inputmessage" name="message"></textarea>
           </div>
           <div class="button-action">
             <input type="submit" value="Submit" />
           </div>
         </form>
         <div class="form-output">
-          <p><span class="output">Current Time : </span><span id="current-time"></span></p>
+          <p><span class="output">Current Time  : </span><span id="current-time"></span></p>
           <br />
           <p><span class="output">Name : </span><span id="submit-name"></span></p>
-          <p><span class="output">Birth Date: </span><span id="submit-birth-date"></span></p>
+          <p><span class="output">Birth Date : </span><span id="submit-birth-date"></span></p>
           <p><span class="output">Gender : </span><span id="submit-gender"></span></p>
           <p><span class="output">Message : </span><span id="submit-message"></span></p>
         </div>
