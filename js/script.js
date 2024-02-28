@@ -38,6 +38,23 @@ function showDivs() {
 }
 
 
+const navbarHeight = document.querySelector('nav').clientHeight;
+
+document.querySelectorAll('nav ul li a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute('href').substring(1);
+    const targetSection = document.getElementById(targetId);
+    const targetOffsetTop = targetSection.offsetTop;
+
+    window.scrollTo({
+      top: targetOffsetTop - navbarHeight,
+      behavior: 'smooth'
+    });
+  });
+});
+
 var today = new Date();
 var formattedToday = today.toISOString().split('T')[0];
 document.getElementById('inputbirthdate').setAttribute('max', formattedToday);

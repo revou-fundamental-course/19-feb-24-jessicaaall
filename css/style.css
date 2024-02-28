@@ -1,23 +1,20 @@
-/* root */
 :root {
   --pink: #FFD0D9;
+  --darkpink: #461731;
   --blue: #E4F2FF;
   --purple: #DFD9FD;
-  --darkblue: #06111f;
+  --darkblue: #051325;
 
   scroll-behavior: smooth;
   font-family: "Montserrat", system-ui, "Segoe UI", Roboto, "Open Sans", "Helvetica Neue", sans-serif;
-  background-color: white;
-
+  background-color: var(--darkblue);
+  color: white;
   padding: 0;
   margin: 0;
-  text-decoration: none;
-  list-style: none;
-  box-sizing: border-box;
 }
 
 body {
-  margin : 0;
+  margin: 0;
   overflow-x: hidden;
 }
 
@@ -34,23 +31,23 @@ nav {
   justify-content: space-between;
   align-items: center;
   background: black;
-  height: 80px;
+  height: 85px;
   width: 100%;
 }
 
-label.logo {
+.logo {
   display: flex;
   padding: 0 50px;
   white-space: nowrap;
   align-items: center;
 }
 
-label>img {
+.logo img {
   height: 40px;
   margin-right: 10px;
 }
 
-label>p {
+.logo p {
   color: white;
   font-weight: 700;
   font-size: 18px;
@@ -69,6 +66,7 @@ nav ul li a {
   color: white;
   font-size: 17px;
   padding: 6px 13px;
+  margin-right: 20px;
   border-radius: 6px;
   text-decoration: none;
 }
@@ -91,6 +89,9 @@ a:hover {
   color: black;
 }
 
+main {
+  margin-bottom: 270px;
+}
 
 .banner {
   position: relative;
@@ -100,7 +101,7 @@ a:hover {
 .home-banner {
   height: 100vh;
   width: 100vw;
-  position:relative;
+  position: relative;
 }
 
 .slide-banner {
@@ -123,7 +124,7 @@ a:hover {
 .banner-text {
   position: absolute;
   height: 100%;
-  width:100%;
+  width: 100%;
   background-color: rgb(0 0 0 / 0.6);
   color: white;
   display: flex;
@@ -160,24 +161,82 @@ a:hover {
   background-color: #d2909a;
 }
 
-.contact {
-  height: 500px;
-  margin: 30px 0;
-  padding: 0 6%;
+.profile-banner h2 {
+  margin-top: 0;
+}
+
+.profile-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-image img {
+  width: 30vw;
+  height: auto;
+}
+
+.text-outline {
+  display: flex;
+  margin: 70px 0px;
+  padding: 12px 6%;
+  gap: 6%;
+}
+
+.profile-text {
   display: flex;
   flex-direction: column;
 }
 
-.contact h2 {
-  color: var(--darkblue);
+.vision-mission {
+  width: 50%;
+  text-align: center;
+  border: 4px solid var(--purple);
+  border-radius: 14px;
+  background-color: white;
+  color: black;
+}
+
+h3 {
+  margin-top: 0;
+  display: flex;
+  font-size: 22px;
   font-weight: 700;
-  font-size: 30px;
-  padding-top: 30px;
-  margin: 60px 0;
+  font-family: "Segoe UI";
+  padding: 12px 10px;
+  background-color: var(--purple);
+  color: black;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.vision-mission p {
+  padding: 0px 15px;
+}
+
+
+.contact {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+h2 {
+  width: auto;
+  background-color: white;
+  color: var(--darkpink);
+  font-weight: 700;
+  font-size: 35px;
+  padding: 35px;
+  display: flex;
+  justify-content: center;
 }
 
 .contact-form {
   display: flex;
+  margin: 50px 0;
+  padding: 0 6%;
 }
 
 form {
@@ -261,12 +320,12 @@ input[type="submit"] {
   font-weight: 600;
   height: 40px;
   border: 2px solid gray;
-  background-color: var(--darkblue);
-  color: white;
+  background-color: var(--pink);
+  color: black;
 }
 
 input[type="submit"]:hover {
-  background-color: rgb(64, 72, 107);
+  background-color: rgb(180, 161, 171);
 }
 
 .form-output {
@@ -277,6 +336,8 @@ input[type="submit"]:hover {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 10px;
+  background-color: white;
+  color: black;
 }
 
 .form-output p {
@@ -286,6 +347,21 @@ input[type="submit"]:hover {
 
 .output {
   font-weight: 600;
+}
+
+
+footer {
+  background-color: black;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  color: white;
+  border-top: 0.5px solid var(--blue);
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
@@ -302,7 +378,7 @@ input[type="submit"]:hover {
     position: fixed;
     width: 40%;
     height: 100vh;
-    background: var(--darkblue);
+    background-color: black;
     top: 60px;
     text-align: left;
     right: 0;
@@ -335,12 +411,49 @@ input[type="submit"]:hover {
 
   .button {
     font-size: 14px;
-    padding: 12px 28px;  
+    padding: 12px 28px;
   }
 
-  .contact {
-    height: auto;
-    padding: 0 6%;
+  .profile-image {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-image img {
+    width: 60%;
+    margin-bottom: 30px;
+  }
+
+  .text-outline {
+    padding: 14px 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-outline p {
+    text-align: center;
+  }
+
+  .vision-mission {
+    width: 100%;
+    text-align: center;
+  }
+
+  #vision {
+    margin-bottom: 60px;
+  }
+
+  .vision-mission p {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .contact-form {
+    padding: 0 8%;
+    flex-direction: column;
+    align-items: center;
   }
 
   .input-type {
@@ -352,8 +465,8 @@ input[type="submit"]:hover {
     padding: 15px 0px 80px 0px;
   }
 
-  .contact-form {
-    flex-direction: column;
+  h2 {
+    font-size: 28px;
   }
 
   form {
@@ -361,7 +474,9 @@ input[type="submit"]:hover {
   }
 
   .form-output {
-    width: auto;
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
 }

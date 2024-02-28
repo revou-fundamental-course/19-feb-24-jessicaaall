@@ -37,10 +37,10 @@
     <section class="banner" id="home">
       <div class="home-banner" id="home-banner">
         <div class="slide">
-          <img class="slide-banner" src="./assets/banner1.jpg"/>
-          <img class="slide-banner" src="./assets/banner2.jpg"/>
-          <img class="slide-banner" src="./assets/banner3.jpg"/>
-          <img class="slide-banner" src="./assets/banner4.jpg"/>
+          <img class="slide-banner" src="./assets/banner1.jpg" />
+          <img class="slide-banner" src="./assets/banner2.jpg" />
+          <img class="slide-banner" src="./assets/banner3.jpg" />
+          <img class="slide-banner" src="./assets/banner4.jpg" />
         </div>
         <div class="banner-text">
           <h1 class="welcome1">Hi, <span id="nameUser"></span>! Welcome to JJ Hotel</h1>
@@ -52,8 +52,63 @@
       </div>
     </section>
 
-    <section class="contact" id="message-us">
-      <h2>Message Us</h2>
+    <section class="profile">
+      <div class="profile-banner">
+        <h2 id="our-profile">About Us</h2>
+      </div>
+      <div class="text-outline">
+        <div class="profile-image">
+          <img src="./assets/hotel.jpg" alt="Hotel Image">
+        </div>
+        <div class="profile-text">
+          <p class="text-content">
+            Established in 1980, JJ Group now operates prestigious luxury hotels in four major cities in Indonesia. We
+            have chosen to specialize within the hospitality industry by offering only experiences of exceptional
+            quality.
+            To us, true luxury is a meaningful sense of belonging. It is a dedicated focus on how people want to be
+            treated, grounded in the genuine care you experience during your stay and defined by an abundance of
+            humanity
+            and generosity.
+            Our objective is to be recognized as the company that manages the finest hotels wherever we locate.
+          </p>
+          <p class="text-content">
+            Managed and operated by the most dedicated and passionate hoteliers, JJ Hotel is the perfect home for
+            business as well as leisure guests. We create properties of enduring value using superior design and
+            finishes,
+            and support them with a deeply
+            instilled ethic of personal service. JJ Hotel reinterprets history, traditions, and modernity in innovative,
+            uniquely timeless ways. Doing so allows JJ Group to satisfy the needs and tastes of our
+            discerning customers, and to maintain our position as the world's premier luxury hospitality company.
+          </p>
+        </div>
+      </div>
+
+      <div class="profile-banner">
+        <h2>Vision & Mission</h2>
+      </div>
+      <div class="text-outline">
+        <div class="vision-mission" id="vision">
+          <h3>Vision</h3>
+          <p class="text-content">
+            We aspire to be acknowledged regionally and accepted globally as one of the most efficiently managed
+            hospitality groups wherein our staff at both managerial and service levels consistently strive to deliver
+            the highest of service standards at all times and under all circumstances.
+          </p>
+        </div>
+        <div class="vision-mission">
+          <h3>Mission</h3>
+          <p class="text-content">
+            We are unswervingly committed in providing and delivering outstanding services and experiences to new and
+            returning guests by exceeding their expectations of what we can offer, by recognizing and acknowledging our
+            employees' contributions and involvement, by ensuring fair and reasonable returns to our shareholders, and
+            by being responsible, conscientious, trustworthy, and dependable corporate citizens.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <h2 id="message-us">Message Us</h2>
       <div class="contact-form">
         <form name="form" onsubmit="return validateForm()">
           <div class="input-type">
@@ -86,7 +141,7 @@
           </div>
         </form>
         <div class="form-output">
-          <p><span class="output">Current Time  : </span><span id="current-time"></span></p>
+          <p><span class="output">Current Time : </span><span id="current-time"></span></p>
           <br />
           <p><span class="output">Name : </span><span id="submit-name"></span></p>
           <p><span class="output">Birth Date : </span><span id="submit-birth-date"></span></p>
@@ -98,6 +153,13 @@
   </main>
 
   <footer>
+    <div class="footer-container">
+      <div class="logo">
+        <img src="assets/logojeje.png" alt="JEJE GROUP" />
+        <p>JJ GROUP</p>
+      </div>
+      <div>© 2024 JJ GROUP | Jessica</div>
+    </div>
   </footer>
   <script src="js/script.js"></script>
 </body>
