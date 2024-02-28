@@ -1,0 +1,286 @@
+/* root */
+:root {
+  --pink: #FFD0D9;
+  --blue: #E4F2FF;
+  --purple: #DFD9FD;
+  --darkblue: #0B1727;
+
+  scroll-behavior: smooth;
+  font-family: "Montserrat", system-ui, "Segoe UI", Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: white;
+
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--darkblue);
+  height: 80px;
+  width: 100%;
+}
+
+label.logo {
+  display: flex;
+  padding: 0 50px;
+  white-space: nowrap;
+  align-items: center;
+}
+
+label>img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+label>p {
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+ul {
+  margin-right: 40px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 17px;
+  padding: 6px 13px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.checkbtn {
+  font-size: 20px;
+  color: white;
+  float: right;
+  margin-right: 50px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+a.active,
+a:hover {
+  background: var(--pink);
+  color: black;
+}
+
+
+
+
+.contact {
+  height: 500px;
+  margin: 30px 0;
+  padding: 0 6%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact h2 {
+  color: var(--darkblue);
+  font-weight: 700;
+  font-size: 30px;
+  padding-top: 30px;
+  margin: 60px 0;
+}
+
+.contact-form {
+  display: flex;
+}
+
+form {
+  width: 50%;
+  justify-content: center;
+}
+
+.input-type {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0px 60px 30px 0px;
+  align-items: center;
+}
+
+.colon {
+  flex: 5%;
+  margin-left: 6px;
+  margin-right: 4px;
+}
+
+form>div>label {
+  flex: 30%;
+}
+
+textarea::placeholder {
+  font-family: sans-serif;
+}
+
+input[type="date"] {
+  font-family: sans-serif;
+}
+
+form>div>input {
+  flex: 80%;
+  border-radius: 8px;
+  border: 2px solid gray;
+  height: 30px;
+  padding: 2px 10px;
+}
+
+.input-radio {
+  display: flex;
+  align-items: center;
+  flex: 84%;
+  height: 30px;
+}
+
+input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid gray;
+  margin-right: 10px;
+}
+
+input#male+label {
+  margin-right: 35px;
+}
+
+form>div>textarea {
+  flex: 80%;
+  height: 100px;
+  resize: none;
+  border-radius: 8px;
+  border: 2px solid gray;
+  padding: 8px 10px;
+  font-family: sans-serif;
+}
+
+#your-message {
+  align-items: flex-start;
+}
+
+.button-action {
+  display: flex;
+  padding: 25px 60px 0px 0px;
+}
+
+input[type="submit"] {
+  font-size: 15px;
+  font-weight: 600;
+  height: 40px;
+  border: 2px solid gray;
+  background-color: var(--darkblue);
+  color: white;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(64, 72, 107);
+}
+
+.form-output {
+  height: auto;
+  width: 45%;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+.form-output p {
+  font-weight: 400;
+  display: none;
+}
+
+.output {
+  font-weight: 600;
+}
+
+
+@media only screen and (max-width: 750px) {
+  label.logo {
+    padding: 0 20px;
+  }
+
+  .checkbtn {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    width: 40%;
+    height: 100vh;
+    background: var(--darkblue);
+    top: 60px;
+    text-align: left;
+    right: 0;
+    margin-right: 0;
+    padding-left: 30px;
+    display: none;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 30px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a {
+    font-size: 17px;
+  }
+
+  #check:checked~ul {
+    display: block;
+  }
+
+
+
+
+  .contact {
+    height: auto;
+    padding: 0 6%;
+  }
+
+  .input-type {
+    padding: 0px 0px 25px 0px;
+  }
+
+  .button-action {
+    width: 100%;
+    padding: 15px 0px 80px 0px;
+  }
+
+  .contact-form {
+    flex-direction: column;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .form-output {
+    width: auto;
+  }
+
+}
