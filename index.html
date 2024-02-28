@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JEJE GROUP</title>
+  <link rel="icon" type="image/x-icon" href="assets/logo.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="./assets/logojeje.png" type="image/png" />
+  <script src="https://kit.fontawesome.com/ad31ed2825.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <label class="logo">
+        <img src="assets/logojeje.png" alt="JEJE GROUP" />
+        <p>JEJE GROUP</p>
+      </label>
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+
+      <ul>
+        <li><a href="#home" onclick="setTitle(this)">Home</a></li>
+        <li><a href="#our-profile" onclick="setTitle(this)">Our Profile</a></li>
+        <li><a href="#portfolio" onclick="setTitle(this)">Portfolio</a></li>
+        <li><a href="#message-us" onclick="setTitle(this)">Message Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact">
+      <h2>Message Us</h2>
+      <div class="contact-form">
+        <form name="form" onsubmit="return validateForm()">
+          <div class="input-type">
+            <label for="name">Name</label>
+            <div class="colon">:</div>
+            <input type="text" id="inputname" placeholder="Your name" name="name" />
+          </div>
+          <div class="input-type">
+            <label for="birth-date">Birth Date</label>
+            <div class="colon">:</div>
+            <input type="date" id="inputbirthdate" placeholder="Your birth date" name="birth-date" />
+          </div>
+          <div class="input-type">
+            <label>Gender</label>
+            <div class="colon">:</div>
+            <div class="input-radio">
+              <input type="radio" id="male" name="gender" value="Male" />
+              <label for="male">Male</label>
+              <input type="radio" id="female" name="gender" value="Female" />
+              <label for="female">Female</label>
+            </div>
+          </div>
+          <div class="input-type" id="your-message">
+            <label for="message">Message</label>
+            <div class="colon">:</div>
+            <textarea placeholder="Your message" id="inputmessage" name="message"></textarea>
+          </div>
+          <div class="button-action">
+            <input type="submit" value="Submit" />
+          </div>
+        </form>
+        <div class="form-output">
+          <p><span class="output">Current Time : </span><span id="current-time"></span></p>
+          <br />
+          <p><span class="output">Name : </span><span id="submit-name"></span></p>
+          <p><span class="output">Birth Date: </span><span id="submit-birth-date"></span></p>
+          <p><span class="output">Gender : </span><span id="submit-gender"></span></p>
+          <p><span class="output">Message : </span><span id="submit-message"></span></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
