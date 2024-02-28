@@ -15,6 +15,29 @@ function setTitle(element) {
   document.title = `${text}`;
 }
 
+function seeMoreButton() {
+  const bannerHeight = document.getElementById("home-banner").clientHeight;
+  const headerHeight = document.getElementsByClassName("header")[0].clientHeight;
+  
+  window.scrollBy(0, bannerHeight - headerHeight);
+}
+
+var slideIndex = 0;
+showDivs();
+
+function showDivs() {
+  var i;
+  var x = document.getElementsByClassName("slide-banner");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1} 
+  x[slideIndex-1].style.display = "block"; 
+  setTimeout(showDivs, 5000); 
+}
+
+
 var today = new Date();
 var formattedToday = today.toISOString().split('T')[0];
 document.getElementById('inputbirthdate').setAttribute('max', formattedToday);

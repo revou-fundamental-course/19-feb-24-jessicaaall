@@ -13,11 +13,11 @@
 </head>
 
 <body>
-  <header>
+  <header class="header">
     <nav>
       <label class="logo">
         <img src="assets/logojeje.png" alt="JEJE GROUP" />
-        <p>JEJE GROUP</p>
+        <p>JJ GROUP</p>
       </label>
       <input type="checkbox" id="check" />
       <label for="check" class="checkbtn">
@@ -34,6 +34,24 @@
   </header>
 
   <main>
+    <section class="banner" id="home">
+      <div class="home-banner" id="home-banner">
+        <div class="slide">
+          <img class="slide-banner" src="./assets/banner1.jpg"/>
+          <img class="slide-banner" src="./assets/banner2.jpg"/>
+          <img class="slide-banner" src="./assets/banner3.jpg"/>
+          <img class="slide-banner" src="./assets/banner4.jpg"/>
+        </div>
+        <div class="banner-text">
+          <h1 class="welcome1">Hi, <span id="nameUser"></span>! Welcome to JJ Hotel</h1>
+          <p class="welcome2">We're here to help you enjoy your stay</p>
+          <button class="button" onclick="seeMoreButton()">
+            See More
+          </button>
+        </div>
+      </div>
+    </section>
+
     <section class="contact" id="message-us">
       <h2>Message Us</h2>
       <div class="contact-form">
