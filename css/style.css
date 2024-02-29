@@ -140,6 +140,8 @@ main {
   font-family: "Segoe UI";
   font-weight: 700;
   margin-bottom: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .welcome2 {
