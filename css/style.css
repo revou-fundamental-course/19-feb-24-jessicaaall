@@ -1,12 +1,13 @@
 :root {
-  --pink: #FFD0D9;
+  --pink: #ffd0d9;
   --darkpink: #461731;
-  --blue: #E4F2FF;
-  --purple: #DFD9FD;
+  --blue: #e4f2ff;
+  --purple: #dfd9fd;
   --darkblue: #051325;
 
   scroll-behavior: smooth;
-  font-family: "Montserrat", system-ui, "Segoe UI", Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Montserrat", system-ui, "Segoe UI", Roboto, "Open Sans",
+    "Helvetica Neue", sans-serif;
   background-color: var(--darkblue);
   color: white;
   padding: 0;
@@ -90,7 +91,7 @@ a:hover {
 }
 
 main {
-  margin-bottom: 270px;
+  margin-bottom: 350px;
 }
 
 .banner {
@@ -192,9 +193,10 @@ main {
   width: 50%;
   text-align: center;
   border: 4px solid var(--purple);
-  border-radius: 14px;
+  border-radius: 16px;
   background-color: white;
   color: black;
+  margin: 20px 0px;
 }
 
 h3 {
@@ -211,44 +213,110 @@ h3 {
 }
 
 .vision-mission p {
-  padding: 0px 15px;
+  padding: 2px 15px;
 }
 
-
-
 .location {
-  display: flex; 
-  justify-content: center; 
+  margin: 30px 0px;
+  display: flex;
+  justify-content: center;
   flex-direction: row;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   gap: 10%;
   width: 100%;
 }
 
 #loc-outline {
-  display: flex; 
-  justify-content: center; 
+  display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
 }
 
 .hotel-profile {
-  display: flex; 
+  display: flex;
   flex-direction: column;
-  align-items: center; 
-  margin: 8px; 
+  align-items: center;
+  margin: 8px;
 }
 
 .hotel-profile img {
-  width: 180px; 
+  width: 180px;
   height: 180px;
-  border-radius: 20px; 
-  box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 0 18px 6px rgba(255, 255, 255, 0.3);
 }
 
 .city {
   margin: 26px;
-  font-size: 20px;
+  font-size: 18px;
+}
+
+.rooms-suites {
+  padding: 10px 2%;
+  position: relative;
+  align-items: center;
+}
+
+.arrow-button {
+  position: absolute;
+  display: flex;
+  top: 45%;
+  background-color: rgba(255, 255, 255, 0.232);
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 18px;
+  box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.278);
+}
+
+.arrow-button:hover{
+  background-color: rgba(255, 255, 255, 0.408);
+}
+
+.prev-button {
+  left: 12%;
+}
+
+.next-button {
+  right: 12%;
+}
+
+.display {
+  display: flex;
+  width: 70%;
+  margin: 20% auto;
+  padding-bottom: 30px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.room-profile {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+
+.room-name {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: Arial;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.room-profile img {
+  object-fit: cover;
+  width: 65%;
+  height: 100%;
 }
 
 .contact {
@@ -264,7 +332,7 @@ h2 {
   color: var(--darkpink);
   font-weight: 700;
   font-size: 35px;
-  padding: 35px;
+  padding: 65px;
   display: flex;
   justify-content: center;
   text-transform: uppercase;
@@ -272,7 +340,7 @@ h2 {
 
 .contact-form {
   display: flex;
-  margin: 50px 0;
+  margin: 70px 0;
   padding: 0 6%;
 }
 
@@ -294,7 +362,7 @@ form {
   margin-right: 4px;
 }
 
-form>div>label {
+form > div > label {
   flex: 30%;
 }
 
@@ -306,7 +374,7 @@ input[type="date"] {
   font-family: sans-serif;
 }
 
-form>div>input {
+form > div > input {
   flex: 80%;
   border-radius: 8px;
   border: 2px solid gray;
@@ -329,11 +397,11 @@ input[type="radio"] {
   margin-right: 10px;
 }
 
-input#male+label {
+input#male + label {
   margin-right: 35px;
 }
 
-form>div>textarea {
+form > div > textarea {
   flex: 80%;
   height: 100px;
   resize: none;
@@ -359,6 +427,7 @@ input[type="submit"] {
   border: 2px solid gray;
   background-color: var(--pink);
   color: black;
+  box-shadow: 0 0 12px 8px rgba(255, 255, 255, 0.278);
 }
 
 input[type="submit"]:hover {
@@ -366,41 +435,38 @@ input[type="submit"]:hover {
 }
 
 .form-output {
-  height: auto;
+  max-height: 405px;
   width: 45%;
   border: 1px solid black;
   border-radius: 8px;
-  padding-left: 20px;
-  padding-right: 20px;
   padding-bottom: 10px;
   background-color: white;
   color: black;
+  overflow-y: auto;
 }
 
 .form-output p {
   font-weight: 400;
   display: none;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .output {
   font-weight: 600;
 }
 
-
-footer {
+.footer-container {
+  margin-top: 100px;
   background-color: black;
+  color: white;
   padding-top: 15px;
   padding-bottom: 25px;
-  color: white;
   border-top: 0.5px solid var(--blue);
-}
-
-.footer-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 
 @media only screen and (max-width: 750px) {
   label.logo {
@@ -434,8 +500,12 @@ footer {
     font-size: 17px;
   }
 
-  #check:checked~ul {
+  #check:checked ~ ul {
     display: block;
+  }
+
+  main {
+    margin-bottom: 750px;
   }
 
   .welcome1 {
@@ -487,6 +557,16 @@ footer {
     flex-direction: row;
   }
 
+  .arrow-button {
+    top: 45%;
+    padding: 12px 16px;
+    font-size: 11px;
+  }
+
+  .room-name {
+    font-size: 18px;
+  }
+
   .contact-form {
     padding: 0 8%;
     flex-direction: column;
@@ -512,8 +592,10 @@ footer {
 
   .form-output {
     width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
+    min-height: 150px;
+    max-height : 400px;
+    padding-left: 0;
+    padding-right: 0;
+    overflow-y: auto;
   }
-
 }

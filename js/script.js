@@ -17,8 +17,9 @@ function setTitle(element) {
 
 function seeMoreButton() {
   const bannerHeight = document.getElementById("home-banner").clientHeight;
-  const headerHeight = document.getElementsByClassName("header")[0].clientHeight;
-  
+  const headerHeight =
+    document.getElementsByClassName("header")[0].clientHeight;
+
   window.scrollBy(0, bannerHeight - headerHeight);
 }
 
@@ -32,32 +33,58 @@ function showDivs() {
     x[i].style.display = "none";
   }
   slideIndex++;
-  if (slideIndex > x.length) {slideIndex = 1} 
-  x[slideIndex-1].style.display = "block"; 
-  setTimeout(showDivs, 5000); 
+  if (slideIndex > x.length) {
+    slideIndex = 1;
+  }
+  x[slideIndex - 1].style.display = "block";
+  setTimeout(showDivs, 5000);
 }
 
+const navbarHeight = document.querySelector("nav").clientHeight;
 
-const navbarHeight = document.querySelector('nav').clientHeight;
-
-document.querySelectorAll('nav ul li a').forEach(link => {
-  link.addEventListener('click', function(e) {
+document.querySelectorAll("nav ul li a").forEach((link) => {
+  link.addEventListener("click", function (e) {
     e.preventDefault();
 
-    const targetId = this.getAttribute('href').substring(1);
+    const targetId = this.getAttribute("href").substring(1);
     const targetSection = document.getElementById(targetId);
     const targetOffsetTop = targetSection.offsetTop;
 
     window.scrollTo({
       top: targetOffsetTop - navbarHeight,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   });
 });
 
+var currentPortfolio = 0;
+const totalDisplay = document.querySelectorAll(".room-profile").length;
+updateDisplay();
+
+document.querySelector(".prev-button").addEventListener("click", function () {
+  currentPortfolio =
+    currentPortfolio === 0 ? totalDisplay - 1 : currentPortfolio - 1;
+  updateDisplay();
+});
+
+document.querySelector(".next-button").addEventListener("click", function () {
+  currentPortfolio =
+    currentPortfolio === totalDisplay - 1 ? 0 : currentPortfolio + 1;
+  updateDisplay();
+});
+
+function updateDisplay() {
+  const displays = document.querySelectorAll(".room-profile");
+  displays.forEach((slide) => {
+    slide.style.display = "none";
+  });
+  displays[currentPortfolio].style.display = "flex";
+  displays[currentPortfolio].style.justifyContent = "center";
+}
+
 var today = new Date();
-var formattedToday = today.toISOString().split('T')[0];
-document.getElementById('inputbirthdate').setAttribute('max', formattedToday);
+var formattedToday = today.toISOString().split("T")[0];
+document.getElementById("inputbirthdate").setAttribute("max", formattedToday);
 
 function validateForm() {
   const name = document.forms["form"]["name"].value;
@@ -66,8 +93,8 @@ function validateForm() {
   const message = document.forms["form"]["message"].value;
 
   if (name == "" || birthDate == "" || gender == "" || message == "") {
-      alert("Please complete the form.");
-      return false;
+    alert("Please complete the form.");
+    return false;
   }
   setSubmitData(name, birthDate, gender, message);
   return false;
@@ -80,9 +107,9 @@ function setSubmitData(name, birthDate, gender, message) {
   document.getElementById("submit-birth-date").innerText = birthDate;
   document.getElementById("submit-gender").innerText = gender;
   document.getElementById("submit-message").innerText = message;
-  
+
   var formOutput = document.querySelectorAll(".form-output p");
-  formOutput.forEach(function(paragraph) {
+  formOutput.forEach(function (paragraph) {
     paragraph.style.display = "block";
   });
 }
