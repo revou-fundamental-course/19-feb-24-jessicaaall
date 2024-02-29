@@ -1,13 +1,11 @@
-/*
 var nameUser;
 while (!nameUser) {
   var nameInput = prompt("Please enter your name.");
   if (nameInput !== null && nameInput.trim() !== "") {
-    nameUser = nameInput;
+    nameUser = nameInput.toUpperCase();
   }
 }
 document.getElementById("nameUser").innerText = nameUser;
-*/
 
 function setTitle(element) {
   const text = element.innerText;
